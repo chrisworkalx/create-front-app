@@ -33,7 +33,7 @@ program.on('--help', () => {
   console.log();
   console.log(
     `Run ${chalk.cyan(
-      'create-front-app <command> --help'
+      'create-fronted-app <command> --help'
     )} for detailed usage of given command.`
   );
   console.log();

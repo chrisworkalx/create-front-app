@@ -1,11 +1,11 @@
 {
-  "name": "create-front-app",
+  "name": "create-fronted-app",
   "version": "1.0.1",
   "description": "快速创建vue、react、qiankun、h5等继承脚手架",
   "main": "index.js",
   "private": false,
   "scripts": {
-    "create-front-app": "node ./bin/create-front-app.js"
+    "create-fronted-app": "node ./bin/create-fronted-app.js"
   },
   "keywords": [
     "vue",
@@ -18,7 +18,7 @@
     "构建工具"
   ],
   "bin": {
-    "create-front-app": "./bin/create-front-app.js"
+    "create-fronted-app": "./bin/create-fronted-app.js"
   },
   "type": "module",
   "engines": {
