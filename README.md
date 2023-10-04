@@ -21,4 +21,6 @@ create-front-app -V (--version)
 create-front-app --help
 # 在aa文件中拉取远程项目 创建项目
 create-front-app aa
+# 获取所有远端的项目名
+create-front-app list
 ```
