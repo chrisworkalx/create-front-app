@@ -33,16 +33,30 @@ const packageJson = JSON.parse(
   fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8')
 );
 function initConfig(options) {
-  const ku = packageJson.name;
+  const cfaCliName = packageJson.name;
   const defaultOptions = {
     organization: 'dream-children' //github 组织
   };
-  return new ConfigStore(ku, Object.assign(defaultOptions, options));
+  return new ConfigStore(cfaCliName, Object.assign(defaultOptions, options));
 }
 const configStore = initConfig();
 
 const getTargetProjectPackageJson = (dir) =>
   JSON.parse(fs.readFileSync(path.join(dir, 'package.json'), 'utf8'));
+
+const checkIsEmptyDir = (folderPath) =>
+  new Promise((res, rej) => {
+    fs.readdir(folderPath, (err, files) => {
+      if (err) {
+        rej(err);
+      }
+      if (files.length === 0) {
+        res(true);
+      } else {
+        res(false);
+      }
+    });
+  });
 
 export {
   wrapLoading,
@@ -50,6 +64,7 @@ export {
   packageJson,
   configStore,
   getTargetProjectPackageJson,
+  checkIsEmptyDir,
   __filename,
   __dirname
 };
