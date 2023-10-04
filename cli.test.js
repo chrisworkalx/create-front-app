@@ -9,6 +9,7 @@ const shellExec = (...args) =>
       if (err) {
         return reject(err);
       } else {
+        console.log('');
         console.log(
           chalk.redBright(`删除当前文件夹${targetPath}所有内容并重新创建`)
         );
@@ -27,9 +28,14 @@ checkIsEmptyDir(targetPath)
     // console.log('isEmpty', isEmpty);
     if (!isEmpty) {
       console.log('这里测试');
-      wrapLoading(shellExec, '正在删除', `cd ${targetPath}/ && rm -rf *`, {
-        cwd: targetPath
-      });
+      wrapLoading(
+        shellExec,
+        `正在删除${chalk.yellowBright(targetPath)}子目录及文件等`,
+        `cd ${targetPath}/ && rm -rf *`,
+        {
+          cwd: targetPath
+        }
+      );
     }
   })
   .catch((e) => {});
