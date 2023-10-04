@@ -46,6 +46,10 @@ const getTargetProjectPackageJson = (dir) =>
 
 const checkIsEmptyDir = (folderPath) =>
   new Promise((res, rej) => {
+    if (!fs.existsSync(folderPath)) {
+      rej('不存在文件夹');
+      return;
+    }
     fs.readdir(folderPath, (err, files) => {
       if (err) {
         rej(err);
