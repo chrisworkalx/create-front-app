@@ -1,0 +1,47 @@
+{
+  "name": "create-front-app",
+  "version": "1.0.0",
+  "description": "快速创建vue、react、qiankun、h5等继承脚手架",
+  "main": "index.js",
+  "scripts": {
+    "create-front-app": "node ./bin/create-front-app.js"
+  },
+  "keywords": [
+    "vue",
+    "react",
+    "qiankun",
+    "single-spa",
+    "element-ui",
+    "antd",
+    "cli",
+    "构建工具"
+  ],
+  "bin": {
+    "create-front-app": "./bin/create-front-app.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=13.2.0"
+  },
+  "author": "chrisworkalx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisworkalx/create-front-app.git"
+  },
+  "homepage": "https://github.com/chrisworkalx/create-front-app.git#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "configstore": "^6.0.0",
+    "cross-spawn": "^7.0.3",
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.6",
+    "figlet": "^1.5.0",
+    "fs-extra": "^9.1.0",
+    "inquirer": "^8.0.0",
+    "log-symbols": "^5.0.0",
+    "ora": "^5.4.0"
+  }
+}
